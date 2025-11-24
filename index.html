@@ -1,89 +1,57 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Haus & Gartenservice Reinhardt — Koblenz & Umgebung</title>
-  <meta name="description" content="Haus & Gartenservice Reinhardt — Professionelle Garten- und Hauspflege in Koblenz und Umgebung. Rasen, Hecken, Pflege, Pflanzungen, Gartenbau.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Haus & Gartenservice Reinhardt</title>
   <style>
-    :root{
-      --accent: #2e8b57;
-      --accent-2: #6bbf6b;
-      --bg: #f7f9f7;
-      --card: #ffffff;
-      --text: #163625;
-      --muted: #5a6a5a;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);line-height:1.5}
-    .container{max-width:980px;margin:32px auto;padding:20px}
-
-    header{display:flex;align-items:center;gap:18px}
-    .logo{
-      width:84px;height:84px;border-radius:12px;
-      background:linear-gradient(135deg,var(--accent),var(--accent-2));
-      display:flex;align-items:center;justify-content:center;
-      color:white;font-weight:700;font-size:18px;text-align:center;
-    }
-    h1{margin:0;font-size:28px}
-    .tag{color:var(--muted);font-size:14px}
-
-    .hero{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:22px}
-    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(22,54,37,0.06)}
-
-    .intro p{margin:0 0 12px}
-    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    .service{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(107,191,107,0.08), transparent);border:1px solid rgba(107,191,107,0.12)}
-    .service h4{margin:0 0 6px}
-
-    .contact {display:flex;flex-direction:column;gap:10px}
-    .tel{display:flex;align-items:center;gap:10px;font-weight:700}
-    a{color:var(--accent);text-decoration:none}
-
-    footer{margin-top:40px;text-align:center;color:var(--muted);font-size:13px}
-    @media(max-width:768px){
-      .hero{grid-template-columns:1fr}
-      .services{grid-template-columns:1fr}
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f9f7; color: #163625; }
+    header { background: #2e8b57; color: white; padding: 40px 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 36px; }
+    .intro { padding: 20px; text-align: center; }
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px; }
+    .service { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    .service h2 { margin-top: 0; color: #2e8b57; }
+    .contact { background: #e6f0e6; padding: 20px; text-align: center; }
+    .contact a { color: #2e8b57; text-decoration: none; font-weight: bold; }
+    footer { background: #163625; color: white; padding: 20px; text-align: center; font-size: 14px; line-height: 1.5; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="logo">🏡🌿</div>
-      <div>
-        <h1>Haus & Gartenservice Reinhardt</h1>
-        <div class="tag">Koblenz & Umgebung</div>
-      </div>
-    </header>
+  <header>
+    <h1>Haus & Gartenservice Reinhardt</h1>
+    <p>Koblenz & Umgebung – Zuverlässig. Grün. Professionell.</p>
+  </header>
 
-    <section class="hero">
-      <div class="card intro">
-        <p>Willkommen bei Haus & Gartenservice Reinhardt! Wir kümmern uns um Ihren Garten und Ihr Haus – zuverlässig, professionell und freundlich.</p>
-      </div>
-      <div class="card contact">
-        <div class="tel">📞 <a href="tel:+4915234205074">+49 152 34205074</a></div>
-        <div class="tel">💬 <a href="https://wa.me/4915234205074" target="_blank">WhatsApp</a></div>
-        <div class="tel">✉️ <a href="mailto:info@example.com">info@example.com</a></div>
-      </div>
-    </section>
+  <section class="intro">
+    <p>Willkommen bei Haus & Gartenservice Reinhardt! Wir kümmern uns zuverlässig um Ihr Zuhause und Ihren Garten – professionell und persönlich.</p>
+  </section>
 
-    <section class="card">
-      <h2>Unsere Leistungen</h2>
-      <div class="services">
-        <div class="service"><h4>Rasenmähen</h4>Professionell und sauber</div>
-        <div class="service"><h4>Hecken schneiden</h4>Formschön und gepflegt</div>
-        <div class="service"><h4>Unkraut entfernen</h4>Schnell & zuverlässig</div>
-        <div class="service"><h4>Gartenpflege</h4>Pflanzen, Blumen, Pflege</div>
-        <div class="service"><h4>Pflanzungen</h4>Bäume, Sträucher, Blumen</div>
-        <div class="service"><h4>Hauspflege außen</h4>Terrassen, Wege, Reinigung</div>
-      </div>
-    </section>
+  <section class="services">
+    <div class="service">
+      <h2>Garten- & Objektpflege</h2>
+      <p>Rasenpflege, Hecken schneiden, Pflanzenpflege, Außenanlagen sauber halten</p>
+    </div>
+    <div class="service">
+      <h2>Hausmeisterservice & Renovierung</h2>
+      <p>Kleinreparaturen, Renovierungsarbeiten, Wartung, Reinigung von Gebäuden</p>
+    </div>
+    <div class="service">
+      <h2>Entrümpelung & Entsorgung</h2>
+      <p>Abfälle, Sperrmüll, alte Möbel, Gartenabfälle sicher und sauber entsorgen</p>
+    </div>
+  </section>
 
-    <footer>
-      &copy; 2025 Haus & Gartenservice Reinhardt | Koblenz & Umgebung
-    </footer>
-  </div>
+  <section class="contact">
+    <p>📞 <a href="tel:+4915234205074">+49 152 34205074</a></p>
+    <p>💬 <a href="https://wa.me/4915234205074" target="_blank">WhatsApp schreiben</a></p>
+    <p>✉️ <a href="mailto:HGS-Koblenz@web.de">HGS-Koblenz@web.de</a></p>
+  </section>
+
+  <footer>
+    <p>Inhaber: Danny Reinhardt</p>
+    <p>Adresse: Am Luisenturm 16, 56077 Koblenz</p>
+    &copy; 2025 Haus & Gartenservice Reinhardt
+  </footer>
 </body>
 </html>
