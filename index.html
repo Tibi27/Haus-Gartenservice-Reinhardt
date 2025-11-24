@@ -3,42 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Haus & Gartenservice Reinhardt – Koblenz</title>
+<title>Haus & Gartenservice Reinhardt</title>
 <meta name="description" content="Professioneller Haus & Gartenservice in Koblenz. Gartenpflege, Hausmeisterservice, Renovierungen, Entrümpelung & Entsorgung. Kostenlose Besichtigung & unverbindliches Angebot.">
-<meta name="keywords" content="Gartenservice Koblenz, Hausmeisterservice, Renovierung, Entrümpelung, Haushaltsauflösung, Gartenpflege">
 
-<!-- Feather Icons -->
 <script src="https://unpkg.com/feather-icons"></script>
 
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family: Arial, sans-serif; scroll-behavior: smooth; background:#f0f0f0; color:#163625; }
+  body { font-family: Arial, sans-serif; scroll-behavior: smooth; background:#f0f0f0; color:#163625; overflow-x:hidden; }
 
   a { text-decoration:none; color:inherit; }
 
-  /* Header */
+  /* Header / Hero */
   header { position:relative; height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; overflow:hidden; }
-  header .bg { position:absolute; inset:0; background:url('header-bg.jpg.jpg') center/cover no-repeat; background-size:cover; filter:brightness(0.6); z-index:0; }
-  header .logo { position:absolute; top:20px; left:20px; width:120px; height:120px; background:url('https://img.kleinanzeigen.de/api/v1/prod-ads/images/f5/f5fb2e57-2bdf-4dbb-a562-75e5aab27b39?rule=$_59.AUTO') center/contain no-repeat; background-size:contain; z-index:2; }
+  header .bg { position:absolute; inset:0; background:url('header-bg.jpg.jpg') center/cover no-repeat; background-size:cover; filter:brightness(0.6); z-index:0; transition:transform 1s ease; }
+  header .logo { position:absolute; top:20px; left:20px; width:180px; height:180px; background:url('https://img.kleinanzeigen.de/api/v1/prod-ads/images/f5/f5fb2e57-2bdf-4dbb-a562-75e5aab27b39?rule=$_59.AUTO') center/contain no-repeat; background-size:contain; z-index:2; }
   .hero-content { position:relative; z-index:1; max-width:800px; padding:20px; }
-  .hero-content h1 { font-size:48px; margin-bottom:20px; text-shadow:2px 2px 8px rgba(0,0,0,0.5); }
-  .hero-content p { font-size:20px; text-shadow:1px 1px 6px rgba(0,0,0,0.5); }
+  .hero-content h1 { font-size:52px; margin-bottom:20px; text-shadow:2px 2px 8px rgba(0,0,0,0.5); }
+  .hero-content p { font-size:22px; text-shadow:1px 1px 6px rgba(0,0,0,0.5); }
 
   /* Sections */
-  section { padding:120px 20px; max-width:1100px; margin:0 auto; text-align:center; color:#fff; opacity:0; transform:translateY(50px); transition: all 0.8s ease; }
-  section.visible { opacity:1; transform:translateY(0); }
-
+  section { padding:120px 20px; max-width:1100px; margin:0 auto; text-align:center; color:#fff; opacity:0; transform:scale(0.95) translateY(50px); transition: all 0.8s ease; border-radius:10px; }
+  section.visible { opacity:1; transform:scale(1) translateY(0); }
   h2.service-title { font-size:40px; margin-bottom:20px; color:rgba(255,255,255,0.6); transition: color 0.4s; }
   section.active h2.service-title { color:#2e8b57; }
-
   .service { margin-top:20px; font-size:18px; line-height:1.6; }
 
+  /* Inaktive Sections leicht unscharf / dunkler */
   section:not(.active) { filter: brightness(0.6) blur(1px); }
 
-  /* Kontakt */
-  #contact { background:#555555; color:#fff; text-align:center; padding:80px 20px; border-radius:10px; }
-  #contact a.btn { display:inline-block; background:#2e8b57; color:#fff; padding:12px 20px; border-radius:10px; font-weight:700; margin:6px; transition:0.2s; }
-  #contact a.btn:hover { background:#276746; }
+  /* Kontaktbereich */
+  #contact { padding:80px 20px; max-width:1100px; margin:0 auto 60px; text-align:center; background:#555555; color:#fff; border-radius:10px; opacity:0; transform:scale(0.95) translateY(50px); transition: all 0.8s ease; }
+  #contact.visible { opacity:1; transform:scale(1) translateY(0); }
+  #contact a { display:inline-block; color:#2e8b57; font-weight:bold; margin:6px; }
 
   footer { text-align:center; padding:20px; background:#163625; color:#fff; font-size:14px; }
 
@@ -46,7 +43,7 @@
     .hero-content h1 { font-size:36px; }
     .hero-content p { font-size:18px; }
     h2.service-title { font-size:32px; }
-    .logo { width:80px; height:80px; top:10px; left:10px; }
+    .logo { width:120px; height:120px; top:10px; left:10px; }
   }
 </style>
 </head>
@@ -88,11 +85,12 @@
 
 <!-- Kontaktbereich -->
 <section id="contact">
-  <h2>Kontakt</h2>
-  <div class="contact">
-    <p>📞 <a href="tel:+4915234205074" class="btn">+49 152 34205074</a></p>
-    <p>💬 <a href="https://wa.me/4915234205074" class="btn" target="_blank" rel="noopener">WhatsApp schreiben</a></p>
-    <p>✉️ <a href="mailto:HGS-Koblenz@web.de" class="btn">E-Mail senden</a></p>
+  <h2 class="service-title">Kontakt</h2>
+  <div class="service">
+    <p>📞 <a href="tel:+4915234205074">+49 152 34205074</a></p>
+    <p>💬 <a href="https://wa.me/4915234205074" target="_blank" rel="noopener">WhatsApp schreiben</a></p>
+    <p>✉️ <a href="mailto:HGS-Koblenz@web.de">E-Mail senden</a></p>
+    <p><strong>Kostenlose Besichtigung & unverbindliches Angebot!</strong></p>
   </div>
 </section>
 
@@ -103,14 +101,19 @@
 <script>
   feather.replace();
 
-  // Fade-In + Active Section
-  const sections = document.querySelectorAll('section.fade');
+  // IntersectionObserver für Fade-In + Active Section
+  const sections = document.querySelectorAll('section.fade, #contact');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
         entry.target.classList.add('visible');
-        sections.forEach(s => s.classList.remove('active'));
-        entry.target.classList.add('active');
+        if(entry.target.id !== 'contact'){ // Für Service Sections
+          sections.forEach(s => s.classList.remove('active'));
+          entry.target.classList.add('active');
+        }
+        // Morphing / Transform Effekt für Hintergrund
+        const bg = document.querySelector('.bg');
+        bg.style.transform = `scale(${1 + entry.intersectionRatio*0.05})`;
       }
     });
   }, { threshold:0.3 });
