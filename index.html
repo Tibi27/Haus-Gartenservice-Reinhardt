@@ -3,30 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Haus & Gartenservice Reinhardt – Gartenpflege, Hausmeisterservice, Entrümpelung Koblenz</title>
+<title>Haus & Gartenservice Reinhardt – Koblenz</title>
 <meta name="description" content="Professioneller Haus & Gartenservice in Koblenz. Gartenpflege, Hausmeisterservice, Renovierungen, Entrümpelung & Entsorgung. Kostenlose Besichtigung & unverbindliches Angebot.">
 <meta name="keywords" content="Gartenservice Koblenz, Hausmeisterservice, Renovierung, Entrümpelung, Haushaltsauflösung, Gartenpflege">
-
-<!-- Open Graph / Social Media Vorschau -->
-<meta property="og:title" content="Haus & Gartenservice Reinhardt – Koblenz">
-<meta property="og:description" content="Gartenpflege, Hausmeisterservice, Renovierungen, Entrümpelung & Entsorgung. Kostenlose Besichtigung & unverbindliches Angebot.">
-<meta property="og:image" content="header-bg.jpg.jpg">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://tibi27.github.io/Haus-Gartenservice-Reinhardt/">
 
 <!-- Feather Icons -->
 <script src="https://unpkg.com/feather-icons"></script>
 
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family: Arial, sans-serif; scroll-behavior: smooth; color:#163625; background:#f0f0f0; }
+  body { font-family: Arial, sans-serif; scroll-behavior: smooth; background:#f0f0f0; color:#163625; }
 
   a { text-decoration:none; color:inherit; }
 
-  /* Header / Hero */
+  /* Header */
   header { position:relative; height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; overflow:hidden; }
   header .bg { position:absolute; inset:0; background:url('header-bg.jpg.jpg') center/cover no-repeat; background-size:cover; filter:brightness(0.6); z-index:0; }
-  header .logo { position:absolute; top:20px; left:20px; width:120px; height:120px; background:url('logo.png.avif') center/contain no-repeat; background-size:contain; z-index:2; }
+  header .logo { position:absolute; top:20px; left:20px; width:120px; height:120px; background:url('https://img.kleinanzeigen.de/api/v1/prod-ads/images/f5/f5fb2e57-2bdf-4dbb-a562-75e5aab27b39?rule=$_59.AUTO') center/contain no-repeat; background-size:contain; z-index:2; }
   .hero-content { position:relative; z-index:2; max-width:800px; padding:20px; }
   .hero-content h1 { font-size:48px; margin-bottom:20px; text-shadow:2px 2px 8px rgba(0,0,0,0.5); }
   .hero-content p { font-size:20px; margin-bottom:30px; text-shadow:1px 1px 6px rgba(0,0,0,0.5); }
@@ -40,17 +33,14 @@
   nav a:hover { background: rgba(46,139,87,0.3); }
 
   /* Sections */
-  section { padding:80px 20px; max-width:1100px; margin:0 auto; background:#9e9e9e; color:#fff; opacity:0; transform:translateY(30px); transition:all 0.8s ease; border-radius:10px; margin-bottom:40px; }
+  section { padding:80px 20px; max-width:1100px; margin:0 auto; background:#9e9e9e; color:#fff; border-radius:10px; margin-bottom:40px; opacity:0; transform:translateY(30px); transition:all 0.8s ease; }
   section.visible { opacity:1; transform:translateY(0); }
-  section h2 { font-size:32px; margin-bottom:30px; color:#2e8b57; text-align:center; }
-  section p { font-size:16px; margin-bottom:16px; text-align:center; }
+  
+  h2.service-title { font-size:32px; margin-bottom:30px; text-align:center; color:rgba(255,255,255,0.6); transition: color 0.4s; }
+  section.active h2.service-title { color:#2e8b57; } /* Grün wie Logo */
 
-  .service { display:flex; flex-direction:column; align-items:center; gap:15px; margin-bottom:30px; transition: all 0.5s; }
-  .service svg { width:60px; height:60px; color:#2e8b57; }
-
-  /* Active Section Highlight */
-  section.active { filter: brightness(1.0); }
-  section:not(.active) { filter: brightness(0.6) blur(1px); }
+  .service { display:flex; flex-direction:column; align-items:center; gap:15px; margin-bottom:30px; }
+  .service svg { width:60px; height:60px; color:#fff; }
 
   /* Kontakt */
   #contact { background:#555555; color:#fff; text-align:center; padding:80px 20px; border-radius:10px; }
@@ -89,29 +79,26 @@
   </div>
 </header>
 
-<!-- Gartenpflege -->
 <section id="gartenpflege" class="fade">
-  <h2>Gartenpflege & Objektpflege</h2>
+  <h2 class="service-title">Gartenpflege & Objektpflege</h2>
   <div class="service">
     <i data-feather="leaf"></i>
-    <p>Rasenpflege, Hecken schneiden, Pflanzenpflege und regelmäßige Objektpflege für ein gepflegtes Erscheinungsbild.</p>
+    <p>Rasenpflege, Hecken schneiden, Pflanzenpflege und regelmäßige Objektpflege.</p>
     <p><strong>Kostenlose Besichtigung & unverbindliches Angebot!</strong></p>
   </div>
 </section>
 
-<!-- Hausmeisterservice -->
 <section id="hausmeister" class="fade">
-  <h2>Hausmeisterservice & Renovierung</h2>
+  <h2 class="service-title">Hausmeisterservice & Renovierung</h2>
   <div class="service">
     <i data-feather="tool"></i>
-    <p>Kleinreparaturen, Renovierungen, Wartung und Reinigung von Gebäuden – sauber, zuverlässig und professionell.</p>
+    <p>Kleinreparaturen, Renovierungen, Wartung und Reinigung von Gebäuden.</p>
     <p><strong>Kostenlose Besichtigung & unverbindliches Angebot!</strong></p>
   </div>
 </section>
 
-<!-- Entrümpelung -->
 <section id="entruempelung" class="fade">
-  <h2>Entrümpelung & Entsorgung</h2>
+  <h2 class="service-title">Entrümpelung & Entsorgung</h2>
   <div class="service">
     <i data-feather="trash-2"></i>
     <p>Entrümpelungen aller Art: Häuser, Wohnungen, Keller, Geschäftsräume, Messi-Wohnungen oder komplette Betriebe.</p>
@@ -120,7 +107,6 @@
   </div>
 </section>
 
-<!-- Kontakt -->
 <section id="contact">
   <h2>Kontakt</h2>
   <div class="contact">
@@ -137,13 +123,13 @@
 <script>
   feather.replace();
 
-  // Fade-In beim Scrollen & Active Section
+  // Fade-In + Active Section Highlight
   const sections = document.querySelectorAll('section.fade');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
         entry.target.classList.add('visible');
-        // Active Highlight
+        // Aktive Section
         sections.forEach(s => s.classList.remove('active'));
         entry.target.classList.add('active');
       }
