@@ -19,7 +19,6 @@
       height: 400px;
       background: url('header-bg.jpg') no-repeat center center;
       background-size: cover;
-      background-attachment: fixed; /* Parallax-Effekt */
       text-align: center;
       color: white;
       display: flex;
@@ -28,18 +27,19 @@
       align-items: center;
     }
 
+    /* Overlay für bessere Lesbarkeit */
     header::after {
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(46,139,87,0.3); /* leichte Overlay-Farbe */
+      background: rgba(46,139,87,0.3);
       z-index: 0;
     }
 
     header h1, header p {
       position: relative;
-      margin: 0;
       z-index: 1;
+      margin: 0;
     }
 
     header h1 { font-size: 36px; }
@@ -150,4 +150,13 @@
         💬 <a href="https://wa.me/4915234205074" target="_blank" rel="noopener" aria-label="Schreiben Sie uns auf WhatsApp">WhatsApp schreiben</a><br>
         ✉️ <a href="mailto:HGS-Koblenz@web.de" aria-label="E-Mail schreiben">HGS-Koblenz@web.de</a>
       </address>
-    </sect
+    </section>
+  </main>
+
+  <footer>
+    <p>Inhaber: Danny Reinhardt</p>
+    <p>Adresse: Am Luisenturm 16, 56077 Koblenz</p>
+    &copy; 2025 Haus & Gartenservice Reinhardt
+  </footer>
+</body>
+</html>
