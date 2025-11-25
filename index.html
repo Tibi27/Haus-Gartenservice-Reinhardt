@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Haus- und Gartenservice Reinhardt</title>
+<title>Haus & Gartenservice Reinhardt</title>
 <meta name="description" content="Professioneller Haus & Gartenservice in Koblenz. Gartenpflege, Hausmeisterservice, Renovierungen, Entrümpelung & Entsorgung. Kostenlose Besichtigung & unverbindliches Angebot.">
-
 <meta name="keywords" content="Hausservice, Gartenservice, Koblenz, Hausmeister, Renovierung, Entrümpelung, Entsorgung, kostenlose Besichtigung">
 
 <script src="https://unpkg.com/feather-icons"></script>
@@ -13,8 +12,11 @@
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family: Arial, sans-serif; scroll-behavior: smooth; color:#163625; overflow-x:hidden; }
-
   a { text-decoration:none; color:inherit; }
+
+  :root {
+      --main-green: #2e8b57; /* Grünton passend zum Logo */
+  }
 
   /* Header / Hero Sticky */
   header {
@@ -24,7 +26,8 @@
     overflow:hidden;
   }
   header .bg {
-    position:absolute; inset:0; background:url('header-bg.jpg.jpg') center/cover no-repeat; background-size:cover;
+    position:absolute; inset:0; background:url('header-bg.jpg.jpg') center/cover no-repeat;
+    background-size:cover;
     filter:brightness(0.6); z-index:-1; transition: transform 1s ease;
   }
   header .logo {
@@ -33,16 +36,23 @@
     left:20px;
     width:360px;
     height:360px;
-    background:url('images/logo.png.png') center/contain no-repeat;
+    background:url('images/logo.png') center/contain no-repeat;
     background-size:contain;
     z-index:2;
-}
+  }
   .hero-content { position:relative; z-index:1; max-width:800px; padding:20px; }
   .hero-content h1 { font-size:52px; margin-bottom:20px; text-shadow:2px 2px 8px rgba(0,0,0,0.5); }
-  .hero-content p { font-size:22px; text-shadow:1px 1px 6px rgba(0,0,0,0.5); }
+  .hero-content .hero-subtitle {
+      font-size:22px;
+      color: var(--main-green);
+      font-weight:500;
+      text-align:center;
+      margin-bottom:20px;
+      text-shadow:1px 1px 6px rgba(0,0,0,0.3);
+  }
   .hero-btn {
     display:inline-block;
-    background:#2e8b57;
+    background:var(--main-green);
     color:#fff;
     font-weight:bold;
     padding:15px 25px;
@@ -62,7 +72,7 @@
   }
   section.visible { opacity:1; transform:scale(1) translateY(0); }
   h2.service-title { font-size:40px; margin-bottom:20px; color:rgba(255,255,255,0.6); transition: color 0.4s; }
-  section.active h2.service-title { color:#2e8b57; }
+  section.active h2.service-title { color:var(--main-green); }
   .service { margin-top:20px; font-size:18px; line-height:1.6; }
 
   /* Inaktive Sections leicht unscharf */
@@ -71,13 +81,13 @@
   /* Kontaktbereich */
   #contact { padding:80px 20px; max-width:1100px; margin:0 auto 60px; text-align:center; background:#555555; color:#fff; border-radius:10px; opacity:0; transform:scale(0.95) translateY(50px); transition: all 0.8s ease; filter:none; }
   #contact.visible { opacity:1; transform:scale(1) translateY(0); }
-  #contact a { display:inline-block; color:#2e8b57; font-weight:bold; margin:6px; }
+  #contact a { display:inline-block; color:var(--main-green); font-weight:bold; margin:6px; }
 
   footer { text-align:center; padding:20px; background:#163625; color:#fff; font-size:14px; }
 
   @media(max-width:768px){
     .hero-content h1 { font-size:36px; }
-    .hero-content p { font-size:18px; }
+    .hero-content .hero-subtitle { font-size:18px; }
     h2.service-title { font-size:32px; }
     .logo { width:240px; height:240px; top:10px; left:10px; }
   }
@@ -90,11 +100,10 @@
   <div class="logo"></div>
   <div class="hero-content">
     <h1>Haus- und Gartenservice Reinhardt</h1>
-    <p>Ihr verlässlicher Partner rund um Haus & Garten – Koblenz & Umgebung</p>
+    <p class="hero-subtitle">Ihr verlässlicher Partner rund um Haus & Garten – Koblenz & Umgebung</p>
     <a href="#contact" class="hero-btn">Kostenlose Besichtigung & unverbindliches Angebot</a>
   </div>
 </header>
-
 
 <main>
 <section id="gartenpflege" class="fade">
@@ -150,7 +159,7 @@
           entry.target.classList.add('active');
         }
         const bg = document.querySelector('.bg');
-        bg.style.transform = `scale(${1 + entry.intersectionRatio*0.05})`;
+        bg.style.transform = scale(${1 + entry.intersectionRatio*0.05});
       }
     });
   }, { threshold:0.3 });
