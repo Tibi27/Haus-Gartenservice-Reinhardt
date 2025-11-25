@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Haus- und Gartenservice Reinhardt</title>
 <meta name="description" content="Professioneller Haus & Gartenservice in Koblenz. Gartenpflege, Hausmeisterservice, Renovierungen, Entrümpelung & Entsorgung. Kostenlose Besichtigung & unverbindliches Angebot.">
-
 <meta name="keywords" content="Hausservice, Gartenservice, Koblenz, Hausmeister, Renovierung, Entrümpelung, Entsorgung, kostenlose Besichtigung">
 
 <script src="https://unpkg.com/feather-icons"></script>
@@ -36,7 +35,7 @@
     background:url('images/logo.png.png') center/contain no-repeat;
     background-size:contain;
     z-index:2;
-}
+  }
   .hero-content { position:relative; z-index:1; max-width:800px; padding:20px; }
   .hero-content h1 { font-size:52px; margin-bottom:20px; text-shadow:2px 2px 8px rgba(0,0,0,0.5); }
   .hero-content p { font-size:22px; text-shadow:1px 1px 6px rgba(0,0,0,0.5); }
@@ -52,6 +51,20 @@
     transition:0.3s;
   }
   .hero-btn:hover { background:#276746; }
+
+  /* Hero-Text für Ganzjahrespflege */
+  .hero-text {
+    margin-top:20px;
+    max-width:600px;
+    font-size:18px;
+    text-shadow:1px 1px 6px rgba(0,0,0,0.5);
+    color:#fff;
+  }
+  .hero-text h2 {
+    font-size:28px;
+    margin-bottom:10px;
+    color:#fff; /* bleibt weiß, nicht grün */
+  }
 
   /* Sections */
   main { position:relative; z-index:1; margin-top:100vh; }
@@ -81,20 +94,6 @@
     h2.service-title { font-size:32px; }
     .logo { width:240px; height:240px; top:10px; left:10px; }
   }
- /* NEUES CSS für den Ganzjahrespflege-Text */
- .hero-text {
-  margin-top: 20px;
-  max-width: 600px;
-  font-size: 18px;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
-}
-.hero-text h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
- }
-
 </style>
 </head>
 <body>
@@ -106,63 +105,50 @@
     <h1>Haus- und Gartenservice Reinhardt</h1>
     <p>Ihr verlässlicher Partner rund um Haus & Garten – Koblenz & Umgebung</p>
     <a href="#contact" class="hero-btn">Kostenlose Besichtigung & unverbindliches Angebot</a>
-   <h1>Haus- und Gartenservice Reinhardt</h1>
-  <p>Ihr verlässlicher Partner rund um Haus & Garten – Koblenz & Umgebung</p>
-  <a href="#contact" class="hero-btn">Kostenlose Besichtigung & unverbindliches Angebot</a>
 
-  <!-- Ganzjahrespflege Text unter dem Button -->
-  <div class="hero-text">
-    <h2>Ganzjahrespflege – Ihr Rundum-Sorglos-Paket</h2>
-    <p>Wir kümmern uns das ganze Jahr über um Ihre Gärten, Grünanlagen und Rasenflächen – egal welcher Größe. Alle Leistungen kommen aus einer Hand, sodass aufwendige Abstimmungen entfallen. Unsere Arbeiten werden stets dokumentiert, damit Sie immer zuverlässig informiert sind. Wir passen unsere Ganzjahrespflege individuell an Ihre Grünanlage und Ihre Wünsche an. Sprechen Sie uns an!</p>
+    <!-- Ganzjahrespflege Text unter dem Button -->
+    <div class="hero-text">
+      <h2>Ganzjahrespflege – Ihr Rundum-Sorglos-Paket</h2>
+      <p>Wir kümmern uns das ganze Jahr über um Ihre Gärten, Grünanlagen und Rasenflächen – egal welcher Größe. Alle Leistungen kommen aus einer Hand, sodass aufwendige Abstimmungen entfallen. Unsere Arbeiten werden stets dokumentiert, damit Sie immer zuverlässig informiert sind. Wir passen unsere Ganzjahrespflege individuell an Ihre Grünanlage und Ihre Wünsche an. Sprechen Sie uns an!</p>
+    </div>
   </div>
-</div>
-</div>
 </header>
 
-
 <main>
- <section id="gartenpflege" class="fade">
-  <h2 class="service-title">Ganzjahrespflege – Ihr Rundum-Sorglos-Paket</h2>
-  <div class="service">
-    <p>Wir kümmern uns das ganze Jahr über um Ihre Gärten, Grünanlagen und Rasenflächen – egal welcher Größe. Alle Leistungen kommen aus einer Hand, sodass aufwendige Abstimmungen entfallen. Unsere Arbeiten werden stets dokumentiert, damit Sie immer zuverlässig informiert sind.</p>
-    <p>Wir passen unsere Ganzjahrespflege individuell an Ihre Grünanlage und Ihre Wünsche an. Sprechen Sie uns an!</p>
-</div>
-</section>
-   
-<section id="gartenpflege" class="fade">
-  <h2 class="service-title">Gartenpflege & Objektpflege</h2>
-  <div class="service">
-    <p>Rasenpflege, Hecken schneiden, Pflanzenpflege und regelmäßige Objektpflege.</p>
-    <p><strong>Kostenlose Besichtigung & unverbindliches Angebot!</strong></p>
-  </div>
-</section>
+  <section id="gartenpflege" class="fade">
+    <h2 class="service-title">Gartenpflege & Objektpflege</h2>
+    <div class="service">
+      <p>Rasenpflege, Hecken schneiden, Pflanzenpflege und regelmäßige Objektpflege.</p>
+      <p><strong>Kostenlose Besichtigung & unverbindliches Angebot!</strong></p>
+    </div>
+  </section>
 
-<section id="hausmeister" class="fade">
-  <h2 class="service-title">Hausmeisterservice & Renovierung</h2>
-  <div class="service">
-    <p>Kleinreparaturen, Renovierungen, Wartung und Reinigung von Gebäuden.</p>
-    <p><strong>Kostenlose Besichtigung & unverbindliches Angebot!</strong></p>
-  </div>
-</section>
+  <section id="hausmeister" class="fade">
+    <h2 class="service-title">Hausmeisterservice & Renovierung</h2>
+    <div class="service">
+      <p>Kleinreparaturen, Renovierungen, Wartung und Reinigung von Gebäuden.</p>
+      <p><strong>Kostenlose Besichtigung & unverbindliches Angebot!</strong></p>
+    </div>
+  </section>
 
-<section id="entruempelung" class="fade">
-  <h2 class="service-title">Entrümpelung & Entsorgung</h2>
-  <div class="service">
-    <p>Entrümpelungen aller Art: Häuser, Wohnungen, Keller, Geschäftsräume, Messi-Wohnungen oder komplette Betriebe.</p>
-    <p>Renovierungsarbeiten nach Bedarf: Tapezieren, Streichen, Laminat- und PVC-Böden.</p>
-    <p><strong>Kostenlose Besichtigung & unverbindliches Angebot!</strong></p>
-  </div>
-</section>
+  <section id="entruempelung" class="fade">
+    <h2 class="service-title">Entrümpelung & Entsorgung</h2>
+    <div class="service">
+      <p>Entrümpelungen aller Art: Häuser, Wohnungen, Keller, Geschäftsräume, Messi-Wohnungen oder komplette Betriebe.</p>
+      <p>Renovierungsarbeiten nach Bedarf: Tapezieren, Streichen, Laminat- und PVC-Böden.</p>
+      <p><strong>Kostenlose Besichtigung & unverbindliches Angebot!</strong></p>
+    </div>
+  </section>
 
-<section id="contact">
-  <h2 class="service-title">Kontakt</h2>
-  <div class="service">
-    <p>📞 <a href="tel:+4915234205074">+49 152 34205074</a></p>
-    <p>💬 <a href="https://wa.me/4915234205074" target="_blank" rel="noopener">WhatsApp schreiben</a></p>
-    <p>✉️ <a href="mailto:HGS-Koblenz@web.de">E-Mail senden</a></p>
-    <p><strong>Kostenlose Besichtigung & unverbindliches Angebot!</strong></p>
-  </div>
-</section>
+  <section id="contact">
+    <h2 class="service-title">Kontakt</h2>
+    <div class="service">
+      <p>📞 <a href="tel:+4915234205074">+49 152 34205074</a></p>
+      <p>💬 <a href="https://wa.me/4915234205074" target="_blank" rel="noopener">WhatsApp schreiben</a></p>
+      <p>✉️ <a href="mailto:HGS-Koblenz@web.de">E-Mail senden</a></p>
+      <p><strong>Kostenlose Besichtigung & unverbindliches Angebot!</strong></p>
+    </div>
+  </section>
 </main>
 
 <footer>
