@@ -1,7 +1,140 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+<meta charset="UTF-8"><!DOCTYPE html>
+<html lang="de">
+<head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haus & Gartenservice Reinhardt</title>
+<meta name="description" content="Professioneller Haus & Gartenservice in Koblenz. Gartenpflege, Hausmeisterservice, Renovierungen, Entrümpelung & Entsorgung. Kostenlose Besichtigung & unverbindliches Angebot.">
+<meta name="keywords" content="Hausservice, Gartenservice, Koblenz, Hausmeister, Renovierung, Entrümpelung, Entsorgung, kostenlose Besichtigung">
+<script src="https://unpkg.com/feather-icons"></script>
+
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: Arial, sans-serif; scroll-behavior: smooth; color:#163625; overflow-x:hidden; }
+  a { text-decoration:none; color:inherit; }
+
+  :root { --main-green: #2e8b57; }
+
+  header {
+    position:fixed; top:0; left:0; width:100%; height:100vh;
+    display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; z-index:0; overflow:hidden;
+  }
+  header .bg {
+    position:absolute; inset:0; background:url('header-bg.jpg') center/cover no-repeat; filter:brightness(0.6); z-index:-1; transition: transform 1s ease;
+  }
+  header .logo {
+    position:absolute; top:20px; left:20px; width:360px; height:360px;
+    background:var(--main-green); /* Logo nur grün */
+    border-radius:50%;
+    z-index:2;
+  }
+
+  .hero-content { position:relative; z-index:1; max-width:800px; padding:20px; }
+  .hero-content h1 { font-size:52px; margin-bottom:20px; text-shadow:2px 2px 8px rgba(0,0,0,0.5); }
+  .hero-content p { font-size:22px; text-shadow:1px 1px 6px rgba(0,0,0,0.5); }
+  .hero-btn { display:inline-block; background:var(--main-green); color:#fff; font-weight:bold; padding:15px 25px; border-radius:10px; margin-top:20px; font-size:18px; transition:0.3s; }
+  .hero-btn:hover { background:#276746; }
+
+  main { position:relative; z-index:1; margin-top:100vh; }
+  section { padding:120px 20px; max-width:1100px; margin:80px auto; text-align:center; color:#fff; opacity:0; transform:scale(0.95) translateY(50px); transition: all 0.8s ease; border-radius:10px; background:#333333; }
+  section.visible { opacity:1; transform:scale(1) translateY(0); }
+  h2.service-title { font-size:40px; margin-bottom:20px; color:rgba(255,255,255,0.6); transition: color 0.4s; }
+  section.active h2.service-title { color:var(--main-green); }
+  .service { margin-top:20px; font-size:18px; line-height:1.6; }
+  section:not(.active):not(#contact) { filter: brightness(0.5) blur(1.5px); }
+  #contact { padding:80px 20px; max-width:1100px; margin:0 auto 60px; text-align:center; background:#555555; color:#fff; border-radius:10px; opacity:0; transform:scale(0.95) translateY(50px); transition: all 0.8s ease; filter:none; }
+  #contact.visible { opacity:1; transform:scale(1) translateY(0); }
+  #contact a { display:inline-block; color:var(--main-green); font-weight:bold; margin:6px; }
+  footer { text-align:center; padding:20px; background:#163625; color:#fff; font-size:14px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bg"></div>
+  <div class="logo"></div>
+  <div class="hero-content">
+    <h1>Haus & Gartenservice Reinhardt</h1>
+    <p>Zuverlässig · Grün · Professionell – Koblenz & Umgebung</p>
+    <a href="#contact" class="hero-btn">Kostenlose Besichtigung & unverbindliches Angebot</a>
+  </div>
+</header>
+
+<main>
+  <section id="ganzjahrespflege" class="fade">
+    <h2 class="service-title">Ganzjahrespflege</h2>
+    <div class="service">
+      <p>Die Ganzjahrespflege ist unser „Rundum-Sorglos-Paket“ für Ihre Gärten, Grünanlagen und Rasenflächen jeder Größe. Wir bieten Ihnen alle Leistungen dieses Bereiches aus einer Hand. Somit entfallen aufwendige Koordinations- und Abstimmungsprobleme. Zudem dokumentieren wir unsere Arbeiten umfassend, so dass Sie immer zuverlässig informiert sind.</p>
+      <p>Die Tätigkeiten der Ganzjahrespflege passen wir individuell an die Grünanlage und an die Kundenwünsche an. Sprechen Sie uns an!</p>
+    </div>
+  </section>
+
+  <section id="entruempelung" class="fade">
+    <h2 class="service-title">Entrümpelung & Entsorgung</h2>
+    <div class="service">
+      <p>Sie benötigen einen Fachmann für die Umsetzung einer Entrümpelung, Haushaltsauflösung? Dann sind Sie bei uns genau richtig.</p>
+      <p>Wir entrümpeln Häuser, Wohnungen, Grundstücke, Keller, Geschäftsräume, Messi-Wohnungen, Brandwohnungen, Büroräume, komplette Betriebe und vieles mehr. Bei Bedarf führen wir auch Renovierungsarbeiten durch: Tapezieren, Streichen, Laminat- oder PVC-Böden werden fachgerecht verlegt.</p>
+      <p>Wir beraten Sie telefonisch oder kommen nach Absprache vorbei, besichtigen die Örtlichkeiten und erstellen ein kostenloses, unverbindliches Angebot.</p>
+      <p><strong>Ihre Zufriedenheit steht bei uns an erster Stelle.</strong></p>
+    </div>
+  </section>
+
+  <section id="gartenpflege" class="fade">
+    <h2 class="service-title">Rund um die Gartenpflege</h2>
+    <div class="service">
+      <p>Zuviel Unkraut? Zu große Hecken und Sträucher? Kein schöner Rasen? Haben Sie den Überblick über Ihren Garten verloren?</p>
+      <p>Kein Problem! Wir arbeiten schnell, sauber und günstig. Mit unserem Profiwerkzeug und erfahrenem Personal geht dies schneller als Sie denken. Wir beraten Sie jederzeit gerne vor Ort.</p>
+    </div>
+  </section>
+
+  <section id="hausmeister" class="fade">
+    <h2 class="service-title">Hausmeisterservice & Renovierung</h2>
+    <div class="service">
+      <p>Kleinreparaturen, Renovierungen, Wartung und Reinigung von Gebäuden.</p>
+      <p><strong>Kostenlose Besichtigung & unverbindliches Angebot!</strong></p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="service-title">Kontakt</h2>
+    <div class="service">
+      <p>📞 <a href="tel:+4915234205074">+49 152 34205074</a></p>
+      <p>💬 <a href="https://wa.me/4915234205074" target="_blank" rel="noopener">WhatsApp schreiben</a></p>
+      <p>✉️ <a href="mailto:HGS-Koblenz@web.de">E-Mail senden</a></p>
+      <p><strong>Kostenlose Besichtigung & unverbindliches Angebot!</strong></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Inhaber: Danny Reinhardt · Am Luisenturm 16, 56077 Koblenz · &copy; 2025 Haus & Gartenservice Reinhardt</p>
+</footer>
+
+<script>
+  feather.replace();
+  const sections = document.querySelectorAll('section.fade, #contact');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        if(entry.target.id !== 'contact'){
+          sections.forEach(s => s.classList.remove('active'));
+          entry.target.classList.add('active');
+        }
+        const bg = document.querySelector('.bg');
+        bg.style.transform = `scale(${1 + entry.intersectionRatio*0.05})`;
+      }
+    });
+  }, { threshold:0.3 });
+  sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Haus & Gartenservice Reinhardt</title>
 <meta name="description" content="Professioneller Haus & Gartenservice in Koblenz. Gartenpflege, Hausmeisterservice, Renovierungen, Entrümpelung & Entsorgung. Kostenlose Besichtigung & unverbindliches Angebot.">
